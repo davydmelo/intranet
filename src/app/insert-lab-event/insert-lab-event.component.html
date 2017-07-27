@@ -1,0 +1,149 @@
+<form style="margin: 60px">
+  <section class="form-block">
+    <label>Inserir Evento de Laboratório</label>
+
+    <div class="form-group row">
+      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+        <label for="gForm_1">Título:</label>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <input class="form-control" type="text" id="gForm_1" placeholder="Enter value here" size="45">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+        <label for="gForm_3">Tipo de Evento:</label>
+      </div>
+      <div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
+        <div class="select form-control">
+          <select id="gForm_3">
+                        <option>Manutenção</option>
+                        <option>Roubo</option>
+                        <option>Extravio</option>                        
+                    </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+        <label for="gForm_4">Descrição:</label>
+      </div>
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <textarea id="gForm_4" rows="5" class="form-control"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+        <label for="gForm_3">Usuários Associados:</label>
+      </div>
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Matrícula</th>
+              <th>Tipo</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Davyd Bandeira de Melo</td>
+              <td>2090290</td>
+              <td>Servidor Técnico-Administrativo</td>
+              <td><a>Excluir</a> <a>Editar</a></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Francisco de Oliveira Machado</td>
+              <td>151515</td>
+              <td>Aluno</td>
+              <td><a>Excluir</a> <a>Editar</a></td>
+            </tr>            
+          </tbody>
+        </table>
+        <button>Inserir Usuário</button>
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+        <label for="gForm_3">Ativos Associados:</label>
+      </div>
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Tombamento</th>
+              <th>Nome</th>
+              <th>Quantidade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>303275</td>
+              <td>Roteador Wi-Fi D-Link FIR-2451</td>
+              <td>1</td>
+              <td><a>Excluir</a> <a>Editar</a></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>303272</td>
+              <td>Cadeira azul para escritório</td>
+              <td>101</td>
+              <td><a>Excluir</a> <a>Editar</a></td>
+            </tr>            
+          </tbody>
+        </table>
+        <button>Inserir Ativo</button>
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+        <label for="gForm_3">Anexos:</label>
+      </div>
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Tipo</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Estação de solda danificada</td>
+              <td>Imagem JPG</td>              
+              <td><a>Excluir</a> <a>Editar</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Termo de responsabilidade</td>
+              <td>Documento PDF</td>              
+              <td><a>Excluir</a> <a>Editar</a></td>
+            </tr>            
+          </tbody>
+        </table>
+        <button>Inserir Anexo</button>
+      </div>
+
+    </div>    
+    
+    <button type="submit" class="btn btn-outline">Inserir</button>
+    <button type="submit" class="btn btn-primary">Cancelar</button>
+  </section>
+</form>
