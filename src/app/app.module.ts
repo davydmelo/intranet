@@ -13,6 +13,8 @@ import { InsertClassComponent } from './insert-class/insert-class.component';
 import { SendMessageComponent } from './send-message/send-message.component';
 import { LoginComponent } from './login/login.component';
 import { InsertClassSessionComponent } from './insert-class-session/insert-class-session.component';
+import { InsertUserComponent } from './insert-user/insert-user.component';
+import { NavigatorComponent } from './navigator/navigator.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { InsertClassSessionComponent } from './insert-class-session/insert-class
     InsertClassComponent,
     SendMessageComponent,
     LoginComponent,
-    InsertClassSessionComponent
+    InsertClassSessionComponent,
+    InsertUserComponent,
+    NavigatorComponent
   ],
   imports: [
     BrowserModule,
