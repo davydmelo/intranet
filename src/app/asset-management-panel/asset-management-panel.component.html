@@ -1,0 +1,46 @@
+<div style="width:1200px;border-color:#f0f0f0;border-width:1px;border-style:solid; height:50px">
+  Usuário        
+</div>
+
+<div style="float: left;width:200px;border-color:#0065AB;border-width:1px;border-style:solid;margin-top:-1px;height:970px;background:#0065AB">
+   <!-- <i class="fa fa-ticket"></i><b>Ações Comuns</b><br/>  -->
+   <div class="p2" style="margin:0px; margin-left:5px;color:white">Ativos</div>
+   <a class="menu-subitem" (click)="panel = 0">&nbsp;&nbsp;Inserir</a><br/>
+   <a class="menu-subitem" (click)="panel = 1">&nbsp;&nbsp;Pesquisar</a><br/>
+   <a class="menu-subitem" (click)="panel = 2">&nbsp;&nbsp;Grupos</a><br/>
+   <a class="menu-subitem" (click)="panel = 3">&nbsp;&nbsp;Inventário</a><br/>
+   
+   <div class="p2" style="margin:0px; margin-left:5px;color: white">Fornecedores</div>
+   <a class="menu-subitem" (click)="panel = 4">&nbsp;&nbsp;Inserir</a><br/>
+   <a class="menu-subitem" (click)="panel = 5">&nbsp;&nbsp;Pesquisar</a><br/>
+
+   <div class="p2" style="margin:0px; margin-left:5px;color: white">Movimentações</div>
+   <a class="menu-subitem" (click)="panel = 6">&nbsp;&nbsp;Inserir</a><br/>
+   <a class="menu-subitem" (click)="panel = 7">&nbsp;&nbsp;Pesquisar</a><br/>
+
+  <!--<div class="p2" style="margin:0px; margin-left:5px">Ações Comuns</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Ver Perfil</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Solicitar Afastamento</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Abrir Processo</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Agendar TCC</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Alterar Senha</div>
+  <br/>
+
+  <div class="p2" style="margin:0px; margin-left:5px">Ações do Perfil</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Auxílio Viagem</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Agendar Defesa</div>
+
+  <br/>
+
+  <div class="p2" style="margin:0px; margin-left:5px">Ações de Administrador</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Inserir Usuário</div>
+  <div class="p3" style="margin:0px; margin-left:15px">Inserir Fornecedor</div>-->
+</div>
+
+<div style="width:1000px;border-color:#f0f0f0;border-width:0px;border-style:solid;margin-top:-1px;margin-left:260px;height:970px">
+  <div [ngSwitch]="panel">
+    <app-insert-asset *ngSwitchCase="0"></app-insert-asset>
+    <app-insert-vendors *ngSwitchCase="4"></app-insert-vendors>
+    <app-list-vendors *ngSwitchCase="5"></app-list-vendors>
+  </div>
+</div>

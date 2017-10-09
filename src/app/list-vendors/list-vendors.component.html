@@ -1,0 +1,28 @@
+ 
+  <div >
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+        <tr>
+          <th><input class="form-control" size="20" name="search_code"></th>
+          <th><input class="form-control" size="45" name="search_name"></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let vendor of vendors; let i = index">
+          <td>{{vendor.id}}</td>
+          <td>{{vendor.name}}</td>
+          <td><a>Excluir</a> <a>Editar</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <button>Inserir Fornecedor</button>
+  </div>

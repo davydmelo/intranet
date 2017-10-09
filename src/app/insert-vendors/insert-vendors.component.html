@@ -1,0 +1,20 @@
+<form style="margin: 60px">
+  <section class="form-block">
+    <label>Inserir Fornecedor</label>
+
+    <div class="form-group row">
+      <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+        <label for="gForm_1">Nome:</label>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <input class="form-control" type="text" id="gForm_1" placeholder="Enter value here" size="45" [(ngModel)]="vendor.name" name="name">
+      </div>
+    </div>
+    
+    <button class="btn btn-outline" (click)="insertVendor()">Inserir</button>
+    <button type="submit" class="btn btn-primary">Cancelar</button>
+    
+
+  </section>
+</form>
+

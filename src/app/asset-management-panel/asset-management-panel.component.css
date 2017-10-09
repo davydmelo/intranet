@@ -1,0 +1,12 @@
+.menu-subitem {
+    margin: 5px 5px 5px 5px;
+    color:white
+}
+
+.menu-subitem:hover {
+    margin: 100px 5px 5px 5px;
+    color:white;
+    font-weight: bold;
+    background: rgba(17, 17, 221, 0.26);
+    cursor:pointer
+}
