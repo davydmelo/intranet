@@ -23,12 +23,22 @@ export class ListVendorsComponent implements OnInit {
   @ViewChild('idFilter') idFilter: ElementRef;
   @ViewChild('nameFilter') nameFilter: ElementRef;
 
+  rows = [];
+  columns = [];
 
   constructor(private vendorService: VendorService) { }
 
   ngOnInit() {
+    
     this.loadVendors();
     
+    this.rows = this.vendors;
+    
+    this.columns = [
+      { prop: 'id' },
+      { name: 'name' }
+    ];
+
   }
 
   loadVendors() {

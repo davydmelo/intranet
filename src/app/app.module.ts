@@ -25,6 +25,8 @@ import { ListVendorsComponent } from './list-vendors/list-vendors.component';
 import { InsertVendorsComponent } from './insert-vendors/insert-vendors.component';
 import { AssetManagementPanelComponent } from './asset-management-panel/asset-management-panel.component';
 
+//import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 const appRoutes: Routes = [
   { path: 'vendor', component: AssetManagementPanelComponent },
 ];
@@ -55,7 +57,8 @@ const appRoutes: Routes = [
     BrowserModule,
     ClarityModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    //NgxDatatableModule
   ],
   providers: [VendorService],
   bootstrap: [AppComponent]
