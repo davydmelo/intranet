@@ -27,9 +27,7 @@
       <div class="col-lg-4 col-md-8 col-sm-12 col-xs-12">
         <div class="select form-control">
           <select id="gForm_3">
-                        <option>Agilent</option>
-                        <option>Minipa</option>
-                        <option>Tektronix</option>                        
+              <option *ngFor="let vendor of vendors; let i = index" value="{{vendor.id}}">{{vendor.name}}</option>
                     </select>
         </div>
       </div>
@@ -157,5 +155,3 @@
     <button type="submit" class="btn btn-primary">Cancelar</button>
   </section>
 </form>
-
-Results: {{ vendors }}

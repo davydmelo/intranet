@@ -17,30 +17,22 @@ import 'rxjs/add/operator/catch'
 })
 export class InsertAssetComponent implements OnInit {
 
-  vendors: any[];
+  vendors: Vendor[];
 
   constructor(private vendorService: VendorService) {
 
   }
 
   ngOnInit() {
-    this.loadVendors();
-  }
-
-  loadVendors()
-  {
-    // Get all vendors
     this.vendorService.getVendors().subscribe
     (
-      vendors =>
-      {
-          this.vendors = vendors;
-          console.log(this.vendors['vendors'][0]);
-      }, 
-      err =>
-      {
-          console.log(err);
-      }
+    vendors => {
+      this.vendors = this.vendorService.orderVendorByName(vendors, false);
+    },
+    err => {
+      console.log(err);
+    }
     );
   }
+
 }

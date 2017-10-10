@@ -36,4 +36,20 @@ export class VendorService {
       });
   }
 
+  orderVendorById(vendors: Vendor[], desc: boolean = true) : Vendor[]
+  {
+    if (desc)
+      return vendors.sort((a, b) => { return (a.id < b.id) ? 1 : 0 });
+    else
+      return vendors.sort((a, b) => { return (a.id > b.id) ? 1 : 0 });
+  }
+
+  orderVendorByName(vendors: Vendor[], desc: boolean = true) : Vendor[]
+  {
+    if (desc)
+      return vendors.sort((a, b) => { return (a.name < b.name) ? 1 : 0 });
+    else
+      return vendors.sort((a, b) => { return (a.name > b.name) ? 1 : 0 });
+  }
+
 }

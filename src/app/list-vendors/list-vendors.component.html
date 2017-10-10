@@ -1,28 +1,43 @@
- 
-  <div >
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Código</th>
-          <th>Nome</th>
-          <th>Ações</th>
-        </tr>
-        <tr>
-          <th><input class="form-control" size="20" name="search_code"></th>
-          <th><input class="form-control" size="45" name="search_name"></th>
-          <th></th>
-        </tr>
-      </thead>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          Código
+            <a (click)="orderIdCres()"><i class="fa fa-sort-numeric-asc" aria-hidden="true" *ngIf="!sortedById || (sortedById && !crescById)"></i></a>
+            <a (click)="orderIdDesc()"><i class="fa fa-sort-numeric-desc" aria-hidden="true" *ngIf="!sortedById || (sortedById && crescById)"></i></a>
+          <br/>
+          <input class="form-control" size="20" name="search_code" (keyup)="onFilterChange(event)" #idFilter></th>
+        <th>Nome
+          <a (click)="orderNameCres()"><i class="fa fa-sort-alpha-asc" aria-hidden="true" *ngIf="!sortedByName || (sortedByName && !crescByName)"></i></a>
+          <a (click)="orderNameDesc()"><i class="fa fa-sort-alpha-desc" aria-hidden="true" *ngIf="!sortedByName || (sortedByName && crescByName)"></i></a>
+          <br/>
+          <input class="form-control" size="45" name="search_name" (keyup)="onFilterChange(event)" #nameFilter></th>
+        <th>Ações<br/>
+          <button (click)="cleanSearchCriteria()">Limpar Pesquisa</button></th>
+      </tr>
+
+    </thead>
+    <tbody *ngIf="vendors.length > 0; else zeroElementMessage">
+
+      <tr *ngFor="let vendor of vendors; let i = index">
+        <td>{{vendor.id}}</td>
+        <td>{{vendor.name}}</td>
+        <td><i class="fa fa-trash-o" aria-hidden="true"></i>
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </td>
+      </tr>
+
+    </tbody>
+
+    <ng-template #zeroElementMessage>
       <tbody>
-
-        <tr *ngFor="let vendor of vendors; let i = index">
-          <td>{{vendor.id}}</td>
-          <td>{{vendor.name}}</td>
-          <td><a>Excluir</a> <a>Editar</a></td>
+        <tr>
+          <td colspan="3">Nenhum fornecedor encontrado.</td>
         </tr>
-
       </tbody>
-    </table>
+    </ng-template>
+  </table>
 
-    <button>Inserir Fornecedor</button>
-  </div>
+  <!-- <button>Inserir Fornecedor</button> -->
+</div>
